@@ -23,6 +23,9 @@ h1 {
 
 #download-buttons {
   text-align: center;
+  display: flex;
+  flex-direction: column; /* Arrange buttons vertically */
+  gap: 10px; /* Spacing between buttons */
 }
 
 button {

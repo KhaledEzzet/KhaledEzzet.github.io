@@ -2,14 +2,23 @@ const dataInput = document.getElementById('data');
 const generateBtn = document.getElementById('generate');
 const downloadBtn = document.getElementById('download');
 const qrcodeImg = document.getElementById('qrcode');
-
 const qrcodeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+const dataMessage = document.getElementById('data-message');
 
 generateBtn.addEventListener('click', () => {
   const data = dataInput.value;
 
+  // Clear any existing steps
+  const stepsList = document.getElementById('steps');
+  stepsList.innerHTML = '';
+
   if (!data) {
-    dataMessage.textContent = 'Oops!  Please enter some data to generate the QR code. '; // Add your preferred emoji here
+    // Display steps with a message for no data
+    stepsList.innerHTML = `
+      <li>1.  Enter your data in the text field above.</li>
+      <li>2.  Click the "Generate QR Code" button.</li>
+      <li>⚠️ Oops! You haven't entered any data yet. </li>
+    `;
     return;
   }
 
@@ -25,6 +34,20 @@ generateBtn.addEventListener('click', () => {
       downloadBtn.disabled = false;
       downloadPNGBtn.disabled = false;
       dataMessage.textContent = ''; // Clear message after successful generation
+
+      // Add steps with emojis (only if data is present)
+      const steps = [
+        '1.  Enter your data in the text field above.',
+        '2. ️ Click the "Generate QR Code" button.',
+        '3.  Your QR code will appear here!',
+        '4. ⬇️ Download the QR code as SVG or PNG.'
+      ];
+
+      steps.forEach(step => {
+        const listItem = document.createElement('li');
+        listItem.textContent = step;
+        stepsList.appendChild(listItem);
+      });
     });
 });
 

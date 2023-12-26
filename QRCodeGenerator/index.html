@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="style.css"> </head>
 <body>
   <h1>QR Code Generator</h1>
+  <p id="data-message"></p>
   <p>Enter your data to generate a QR code:</p>
   <input type="text" id="data" placeholder="Data to encode">
   <button id="generate">Generate QR Code</button>
 
   <div id="qrcode-container">
     <img id="qrcode" src="" alt="QR Code">
+    <ul id="steps"></ul>
   </div>
 
   <div id="download-buttons">
