@@ -37,10 +37,7 @@ generateBtn.addEventListener('click', () => {
 
       // Add steps with emojis (only if data is present)
       const steps = [
-        '1.  Enter your data in the text field above.',
-        '2. ️ Click the "Generate QR Code" button.',
-        '3.  Your QR code will appear here!',
-        '4. ⬇️ Download the QR code as SVG or PNG.'
+        '. ⬇️ Download the QR code as SVG or PNG.'
       ];
 
       steps.forEach(step => {
@@ -88,3 +85,11 @@ downloadPNGBtn.addEventListener('click', () => {
   };
   img.src = `data:image/svg+xml;base64,${btoa(svgString)}`;
 });
+
+/* 
+
+  '1.  Enter your data in the text field above.',
+        '2. ️ Click the "Generate QR Code" button.',
+        '3.  Your QR code will appear here!',
+        '4. ⬇️ Download the QR code as SVG or PNG.'
+*/
