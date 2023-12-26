@@ -4,15 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Generator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <link rel="stylesheet" href="style.css"> </head>
 <body>
   <h1>QR Code Generator</h1>
-  <input type="text" id="data" placeholder="Enter your data">
+  <p>Enter your data to generate a QR code:</p>
+  <input type="text" id="data" placeholder="Data to encode">
   <button id="generate">Generate QR Code</button>
-  <button id="download">Download SVG</button>
-  <br>
-  <img id="qrcode" src="" alt="QR Code">
+
+  <div id="qrcode-container">
+    <img id="qrcode" src="" alt="QR Code">
+  </div>
+
+  <div id="download-buttons">
+    <button id="download" disabled>Download SVG</button>
+    <button id="download-png" disabled>Download PNG</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
