@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#0f172a" offset="0"/>
+    <stop stop-color="#0b1224" offset="1"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#10b981" stop-opacity="0.8" offset="0"/>
+    <stop stop-color="#10b981" stop-opacity="0" offset="1"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#g1)"/>
+<circle cx="200" cy="120" r="180" fill="url(#g2)"/>
+<circle cx="1000" cy="540" r="220" fill="url(#g2)" opacity="0.6"/>
+<text x="80" y="340" fill="white" font-size="64" font-family="Space Grotesk, 'Plus Jakarta Sans', sans-serif" font-weight="700">AQLAN</text>
+<text x="80" y="410" fill="#9CA3AF" font-size="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500">AI solutions & automation for modern teams</text>
+</svg>
